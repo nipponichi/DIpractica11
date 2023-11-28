@@ -5,14 +5,30 @@
     </head>
     <body>
         <?php
-        $nombre = "Javier";
-        $arr_nombres[] = "Juan";
-        $arr_nombres[] = "Pedro";
-        echo "hola mundo".$nombre;
-
-        for($i=0; $i <count($arr_nombres); $i++){
-           echo "</br>".$arr_nombres[$i];
-        }
+            $rows = 6;
+            $cols = 4;
         ?>
+        <table>
+            <thead>
+                <tr>
+                    <?php
+                        for($i=0; $i < $cols; $i++){
+                            echo "<th> Campo".($i+1)."</th>";
+                        }
+                    ?>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    for($i = 0; $i < $rows; $i++){
+                        echo "<tr>";
+
+                        for($j = 0; $j < $cols; $j++){
+                            echo "<td>Fila".($i+1)."Columna".($j+1)."</td>";
+                        }
+                    }
+                ?>
+            </tbody>
+        </table>
     </body>
 </html>
